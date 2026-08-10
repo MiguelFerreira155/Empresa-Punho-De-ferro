@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #111;
+    color: white;
+}
+
+header {
+    background: #b30000;
+    padding: 40px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 60px;
+}
+
+header p {
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 30px;
+    background: #1c1c1c;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #b30000;
+    color: white;
+    transition: .3s;
+}
+
+button:hover {
+    background: #ff0000;
+    transform: scale(1.05);
+}
+
+.conteudo {
+    display: none;
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    background: #1d1d1d;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+}
+
+.conteudo img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.texto {
+    padding: 30px;
+}
+
+h2 {
+    color: #ff3b3b;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 19px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+ul {
+    margin-left: 25px;
+    font-size: 20px;
+    line-height: 2;
+}
+
+/* Estilos para o Formulário de Cadastro */
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #ccc;
+}
+
+.form-group input {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background: #2b2b2b;
+    color: #fff;
+    font-size: 16px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #ff3b3b;
+}
+
+.btn-enviar {
+    margin-top: 15px;
+    width: 100%;
+}
+
+/* Estilos do Chat Bot Flutuante */
+#chat-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #b30000;
+    color: white;
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+#chat-toggle:hover {
+    transform: scale(1.1);
+    background: #ff0000;
+}
+
+.chat-container {
+    display: none;
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 320px;
+    height: 420px;
+    background: #1c1c1c;
+    border: 2px solid #b30000;
+    border-radius: 15px;
+    flex-direction: column;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.chat-header {
+    background: #b30000;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 12px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message {
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    max-width: 85%;
+    line-height: 1.4;
+}
+
+.message.bot {
+    background: #2b2b2b;
+    color: white;
+    align-self: flex-start;
+}
+
+.message.user {
+    background: #b30000;
+    color: white;
+    align-self: flex-end;
+}
+
+.chat-options {
+    padding: 10px;
+    background: #111;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.chat-options button {
+    font-size: 12px;
+    padding: 8px;
+    background: #2b2b2b;
+    border: 1px solid #444;
+    border-radius: 5px;
+}
+
+.chat-options button:hover {
+    background: #b30000;
+}
